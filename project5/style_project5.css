@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    background-color: #e5eeff;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 90vw;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    box-shadow: 5px 10px 10px #0000004b;
+}
+.blue-section {
+    background-color: #020253;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/5;
+    grid-row: 1/3;
+    padding: 2rem;
+    border-radius: 10px;
+    animation: rotate 2s linear;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-delay: 2s;
+}
+.blue-section h1 {
+    color: #0ee1da;
+    font: normal normal bold 61px/80px Assistant;
+    text-align: center;
+}
+.blue-section p {
+    color: #f9f9f9;
+    font: normal normal normal 20px/26px Assistant;
+    direction: rtl;
+    text-align: center;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(0.9);
+    transition: transform 2s;     
+}  
+.img img:hover {
+    filter: unset;
+    transform: scaley(-0.8);
+}
+.form {
+    background-color: #8e097c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 4/7;
+    padding: .5rem;
+    border-radius: 10px;
+    transition: transform 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+.form:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+.form h1 {
+    color: #ffffff;
+    font: normal normal bold 35px/46px Assistant;
+    padding: .5rem;
+    margin-bottom: 20.24px;
+}
+.form p {
+    color: #f9f9f9;
+    font: normal normal normal 18px Assistant;
+    padding: .5rem;
+    direction: rtl;
+    margin-bottom: 20.24px;
+}
+.form form {
+    color: #0ee1da;
+    direction: rtl;
+    font: normal normal bold 16px/24px Heebo;
+    margin-bottom: 20.24px;
+    padding: .5rem;
+}
+label[for="Name"] {
+    display: block;
+    margin-bottom: 5px;
+    text-align: right;
+}
+label[for="email"] {
+    display: block;
+    margin-bottom: 5px;
+    text-align: right;
+}
+label[for="freeText"] {
+    display: block;
+    margin-bottom: 5px;
+    text-align: right;
+}
+#Name {
+    text-decoration: underline, #0ee1da;
+    background-color: #e5eeff;
+    border: none;
+    border-bottom: 5px solid #0ee1da;
+    width: 30vw;
+    height: 5vh;
+    margin-bottom: 20.24px;
+}
+#email {
+    background-color: #e5eeff;
+    border: none;
+    border-bottom: 5px solid #0ee1da;
+    width: 30vw;
+    height: 5vh;
+    margin-bottom: 20.24px;
+}
+#freeText {
+    background-color: #e5eeff;
+    border: none;
+    border-bottom: 5px solid #0ee1da;
+    width: 30vw;
+    height: 12vh;
+    margin-bottom: 20.24px;
+}
+input[type="submit"] {
+    color: #011560;
+    background-color: #0ee1da;
+    width: 30vw;
+    height: 5.5vh;
+    border: none;
+    margin-top: .8rem;
+    font: normal normal bold 24px/33px Heebo;
+}
+input[type="submit"]:hover {
+    background-color: #011560;
+    color: #0ee1da;
+    transition: transform 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+}
+input[type="submit"]:active {
+    background-color: #0ee1da;
+    color: #011560;
+    transition: transform 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    transition-property: transform;
+    transition-duration: 1s;
+    transform: scale(0.9);
+}/*animation*/
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        filter: opacity(0.9);
+        animation-delay: 1s;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+
+    to {
+        transform: rotate(360deg);
+        filter: opacity(0.9);
+        animation-delay: 1s;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+}
+/*responsivity*/
+@media (max-width: 1200px) {
+    body {
+        justify-content: unset;
+        align-items: center;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #e5eeff;
+        margin-top: unset;
+        margin-bottom: unset;
+        padding: 0;
+        box-shadow: unset;
+        animation: unset;
+        animation-direction: unset;
+        animation-play-state: unset;
+        animation-delay: unset;
+        animation-duration: unset;
+        animation-timing-function: unset;
+        
+}
+}
+@media (max-width: 900px) {
+    body {
+        justify-content: unset;
+    }
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        margin-top: unset;
+        margin-bottom: unset;
+        gap: unset;
+    }
+    .blue-section {
+       
+        margin-right: 0.3rem;
+        margin-left: 0.3rem;
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .blue-section h1 {
+        font: normal normal bold 36px/47px Assistant;
+    }
+    .blue-section p {
+        font: normal normal normal 20px/26px Assistant;
+    }
+    .img img {
+        padding: 0.3rem;
+        box-shadow: none;
+        filter: unset;
+    }
+    .form {
+        margin-right: 0.3rem;
+        margin-left: 0.3rem;
+        background-color: #8e097c;
+        grid-column: 1/3;
+        grid-row: 7/9;
+    }
+    .form h1 {
+        font: normal normal bold Assistant;
+        font-size: 1.8rem;
+    }
+    .form p {
+        font: normal normal normal Assistant;
+        font-size: 1.1rem;
+        padding: 30px;
+    }
+    .form label {
+        font: normal normal bold Heebo;
+        font-size: 0.7rem;
+    }
+    #Name {
+        margin-bottom: 17px;
+    }
+    #email {
+        margin-bottom: 11px;
+    }
+    #freeText {
+        width: 80vw;
+        height: 16vh;
+        margin-bottom: 13px;
+        border-bottom: 3px solid #0ee1da;
+    }
+    #Name,
+    #email,
+    input[type="submit"] {
+        width: 80vw;
+        height: 10%;
+        border-bottom: 3px solid #0ee1da;
+    }
+    input[type="submit"] {
+        font: normal normal bold Heebo;
+        font-size: 0.9rem;
+        letter-spacing: 0.18px;
+        margin-bottom: 60px;
+    }
+}
