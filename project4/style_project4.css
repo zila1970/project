@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Assistant;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.image-section img { 
+    width: 100%;
+    height: 65vh;
+    position: absolute;
+    background: transparent url('img/Path 15.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+    z-index: 1;
+    animation: slideBottom 1s linear;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+.overlay-text{
+    position: relative;
+    top: 130px;
+    z-index: 99;
+}
+.overlay-text h1{
+    position: relative;
+    text-align: center;
+    font: normal normal bold 80px Assistant;
+    letter-spacing: 0px;
+    color: #D3E10E;
+    animation: rotate 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+.overlay-text p{
+    text-align: center;  
+    font: normal normal bold 17px Assistant;
+    letter-spacing: 0px;
+    color: #F9F9F9;
+    animation: slideTop 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+.form-section{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
+    gap: 1rem;
+    position: fixed;
+    width: 60vw;
+    bottom: 18%;
+    left: 20%;
+    z-index: 99;
+    animation: slideBottom 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+}
+.form-section label{
+    display: block;
+    direction: rtl;
+}
+.form-section label,input{
+    color: #011560;
+    margin: 0.2rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font: normal normal bold 14px Assistant;
+    letter-spacing: 0px;
+}    
+.form-section input{
+    width: 25vw;
+    height: 4.5vh;
+    background: transparent;
+    border-bottom: 4px solid #D3E10E;
+    direction: rtl; 
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn>input[type=submit] {
+    color: #011560;
+    width: 12.5vw; 
+    height: 4.5vh;
+    border: none;
+    background: #D3E10E 0% 0% no-repeat padding-box;
+    cursor: pointer;
+    margin-right: .5rem;
+    text-align: center;
+    font: normal normal bold 18px Assistant;
+    letter-spacing: 0.33px;
+}
+.btn>input[type=submit]:hover {
+    background: #D3E10E 0% 0% no-repeat padding-box;
+    color: #011560;
+    box-shadow: 0px 0px 10px #011560;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-1px);
+    border-radius: 5px;
+    outline: none;
+   }   
+/*keyframes animation*/
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+ /*breakpoints/responsivity*/
+@media (max-width: 1200px) {
+    .overlay-text h1 {
+        font-size: 80px;
+    }
+    .overlay-text p {
+        font-size: 15px;
+    }
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+        width: 60vw;
+        bottom: 8%;
+        left: 20%;
+    }
+    .form-section input {
+        width: 25vw;
+        height: 4.5vh;
+        background: transparent;
+        direction: rtl;
+    }
+    .btn>input[type=submit] {
+        width: 25vw;
+        height: 4.5vh;
+        border: none;
+        margin-right: .5rem;
+        text-align: center;
+        font: normal normal bold 18px Assistant;
+        letter-spacing: 0.33px;
+    }
+    .form-section label {
+        display: block;
+        direction: rtl;
+        font-size: 12px;
+    }
+    .form-section label,
+        input {
+        margin: 0.2rem;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font: normal normal bold 14px Assistant;
+        letter-spacing: 0px;
+    }
+    .form-section input {
+        width: 40vw;
+        height: 4.5vh;
+        background: transparent;
+    }
+    .btn>input[type=submit] {
+        width: 40vw;
+        height: 4.5vh;
+        border: none;
+        }
+}
+@media (max-width: 900px) {
+    .overlay-text h1 {
+        font-size: 65px;
+        padding: 1rem;
+    }
+    .overlay-text p {
+        font-size: 15px;
+        padding: 1rem;
+    }
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+        z-index: 99;
+    }
+    .form-section input {
+        width: 50vw;
+        height: 4.5vh;
+        background: transparent;
+        direction: rtl;
+        outline: none;
+    }
+    .btn>input[type=submit] {
+        width: 50vw;
+        height: 4.5vh;
+        border: none;
+    }
+}
+@media (max-width: 700px) {
+    .overlay-text h1 {
+        font-size: 50px;
+        padding: 1rem;
+    }
+    .overlay-text p {
+        font-size: 13px;
+        padding: 1rem;
+    }
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: fixed;
+       
+    }
+    .form-section input {
+        width: 60vw;
+        height: 4.5vh;
+        background: transparent;
+    }
+    .btn>input[type=submit] {   
+        width: 60vw;
+        height: 4.5vh;
+        border: none;
+    }
+}
+@media (max-width: 550px) {
+    .overlay-text h1 {
+        font-size: 35px;
+        padding: 1rem;
+    }
+    .overlay-text p {
+        font-size: 12px;
+        padding: 1rem;
+    }
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .form-section input {
+        width: 60vw;
+        height: 4vh;
+        background: transparent;
+        direction: rtl;
+    }
+    .btn>input[type=submit] {
+        width: 60vw;
+        height: 4vh;
+        border: none;
+        font-size: 14px;
+    }
+    .form-section label {
+        display: block;
+        direction: rtl;
+        font-size: 10px;
+    }
+}
+@media (max-width: 400px) {
+    .overlay-text h1 {
+        font-size: 33px;
+    }
+    .overlay-text p {
+        font-size: 12px;
+    }
+} 
+@media (max-width: 300px) {
+    .overlay-text h1 {
+        font-size: 30px;
+    }
+         .overlay-text p {
+             font-size: 12px;
+    }
+}
+@media (max-width: 280px) {
+    .overlay-text h1 {
+        font-size: 30px;
+    }
+    .overlay-text p {
+         font-size: 12px;
+    }
+    .form-section input {
+    width: 70vw;
+    height: 4vh;
+    background: transparent;
+    direction: rtl;
+    }
+    .btn>input[type=submit] {
+    width: 70vw;
+    height: 4vh;
+    border: none;
+    font-size: 14px;
+    }
+    .form-section label {
+    display: block;
+    direction: rtl;
+    font-size: 10px;
+    }
+}
+
+ 
+      
+    
+      
+
+
+
+  
