@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+   display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+    justify-content: center;
+    align-items: center;
+ }
+ .content{
+    width: 50vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+ } 
+ .text{
+    text-align: center;
+    direction: rtl;
+ }  
+.text h1{ 
+    text-align: center;     
+    font: normal normal normal 130px Satisfy;
+    letter-spacing: 0px;
+    font-size: 6.5rem;
+    color: #fff;
+    text-shadow: 0px 0px 36px #00000087;
+    margin-bottom: .5rem;
+    animation: rotate 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+
+}
+.text h3{
+    height: 30px;
+    direction: rtl;
+    color: #fff;
+    text-align: center;
+    font: normal normal normal 32px Varela Round;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    margin-bottom: 1.5rem;
+    animation: slideTop 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+
+}
+.text p{
+    font: normal normal normal 16px Varela Round;
+    font-size: .8rem;
+    letter-spacing: 0px;
+    color: #fff;   
+    text-align: center;
+    animation: slideTop 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+
+}
+.form-section{
+    width: 60vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
+    gap: 1rem;
+    animation: slideBottom 1s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+
+}
+.form-section label{
+    display: block;
+    direction: rtl;
+}
+.form-section label,input{
+    color: #fff;
+    font: normal normal normal 18px Varela Round;
+    font-weight: 400;
+}
+.form-section input{
+    width: 20vw;
+    height: 5vh;
+    border: 1px solid #fff;
+    background: transparent;
+    direction: rtl;
+}
+.btn>input[type=submit] {
+    background: #fff;
+    color: #020253;
+    width: 10vw; 
+    height: 5vh;
+    border: none;   
+}
+.btn>input[type=submit]:hover {
+    background: #020253;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+/*keyframes animation*/
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes slideTop {
+0% {
+        transform: translateY(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slideBottom {
+0% {
+        transform: translateY(100px);
+        opacity: 0;
+        display: none;
+    }
+}
+/*breakpoints/responsivity*/
+@media (max-width: 1300px) {
+    .text h1 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        animation: none;
+    }
+    .text h3 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        animation: none;
+    }                      
+    .text p {
+        font-size: 1rem;
+        animation: none;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 991px) {
+    .form-section {
+        width: 70vw;
+    }
+    .text h1{
+        font-size: 4.8rem;
+        margin-bottom: 1rem;
+        animation: none;
+    }
+    .text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        animation: none;
+    }
+    .text p {
+        font-size: 1rem;
+        animation: none; 
+        margin-bottom: 2rem;   
+    }
+    .form-section {
+        width: 80vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        animation: none;
+    }
+    .form-section label {
+        font-size: 1.2rem;
+        animation: none;
+    }
+    .form-section input {
+        width: 60vw;
+        height: 5vh;
+        animation: none;
+        }
+    
+    .btn>input[type=submit] {
+        width: 60vw;
+        height: 5vh;
+        font-size: 17px;
+        animation: none;
+        }
+}
+@media (max-width: 800px) {
+    .text h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        animation: none;
+    }
+    .text h3 {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        animation: none;
+    }
+    .text p {
+        font-size: .7rem;
+        animation: none;
+        margin-bottom: 2rem;
+    }
+    .form-section {
+        width: 80vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        animation: none;
+    }
+    .form-section label {
+        font-size: 1.2rem;
+        animation: none;
+    }            
+    .form-section input {
+        width: 60vw;
+        height: 4vh;
+        animation: none;
+        margin-bottom: .5rem;
+    }               
+    .btn>input[type=submit] {
+        width: 60vw;
+        height: 4vh;
+        font-size: 16px;
+        animation: none;
+    }
+}
+@media (max-width: 500px) {
+    .form-section {
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        animation: none;
+    }
+    .text h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        animation: none;
+        margin-top: 3rem;
+    }
+    .text h3 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        animation: none;
+    }
+    .text p {
+        font-size: .6rem;
+        animation: none;
+        margin-bottom: 2rem;
+    }
+    .form-section label {
+        font-size: 1rem;
+        animation: none;
+    }
+    .form-section input {
+        width: 60vw;
+        height: 4vh;
+        animation: none;
+    }
+    .btn>input[type=submit] {
+        width: 60vw;
+        height: 4vh;
+        font-size: 15px;
+        animation: none;
+    }
+}                                                                                 
+@media (max-width: 350px) {
+    .form-section {
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        animation: none;
+        }
+    .text h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        animation: none;
+    }
+    .text h3 {
+        font-size: .8rem;
+        margin-bottom: 2rem;
+        animation: none;
+    }
+    .text p {
+        font-size: .6rem;
+        animation: none;
+        margin-bottom: 2rem;
+    }
+    .form-section label {
+        font-size: 0.5;
+        animation: none;
+    }
+    .form-section input {
+        width: 60vw;
+        height: 2.5vh;
+        animation: none;
+        margin-bottom: .5rem;
+    }
+    .btn>input[type=submit] {
+            width: 60vw;
+            height: 2.5vh;
+            font-size: 13px;
+            animation: none;
+    }
+}
+
+
+
+
+   
