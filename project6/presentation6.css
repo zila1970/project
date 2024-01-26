@@ -215,6 +215,9 @@ body {
     height: 500px;
     box-shadow: 0px 0px 40px #00000066;
     opacity: 1;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1.6s;
+    animation-duration: 1s;
 }
 
 .footer {
@@ -276,7 +279,7 @@ body {
 }
 
 /*breakpoints/responsivity*/
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     html {
         font-size: 55%;
     }
@@ -293,6 +296,15 @@ body {
 
     .footer {
         padding: 2rem 3%;
+    }
+    #img {
+        display: block;
+        margin: auto;
+        height: 500px;
+        box-shadow: 0px 0px 40px #00000066;
+        opacity: 1;
+        width: 50%;
+        object-fit: cover;
     }
 }
 
@@ -369,10 +381,11 @@ body {
     #img {
         display: block;
         margin: auto;
-        width: 45%;
         height: 500px;
         box-shadow: 0px 0px 40px #00000066;
         opacity: 1;
+        width: 50%;
+        object-fit: cover;
     }
 }
 
@@ -381,15 +394,14 @@ body {
         font-size: 1rem;
         margin: 1.5rem 0 2.5rem;
     }
-
-
-
     #img {
         display: block;
         margin: auto;
-        width: 30%;
         height: 500px;
         box-shadow: 0px 0px 40px #00000066;
+        opacity: 1;
+        width: 50%;
+        object-fit: cover;
     }
 
     .footer p {
