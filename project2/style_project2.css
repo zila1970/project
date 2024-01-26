@@ -232,9 +232,8 @@ input[type="submit"]:hover {
         top: 250px;
         width: 300px;
         height: 470px;
-        margin-left: 100px;
-        margin-bottom: 200px;
-        padding: auto;
+        margin: auto;
+        margin-top: 0px;
     }
 
     .form-content {
@@ -286,12 +285,12 @@ input[type="submit"]:hover {
     #Name {
         height: 30px;
         margin: .5rem;
-        width: 36vw;
+        width: 37vw;
 
     }
 
     #email {
-        width: 36vw;
+        width: 37vw;
         height: 30px;
         margin: .5rem;
     }
@@ -301,12 +300,36 @@ input[type="submit"]:hover {
         text-align: center;
         font: normal normal bold 20px/30px Heebo;
         letter-spacing: 0.33px;
-        width: 16vw;
+        width: 20vw;
         height: 35px;
         margin: 1.3rem;
     }
 }
-    
+@media (max-width: 600px) {
+    #Name {
+        height: 30px;
+        margin: .5rem;
+        width: 40vw;
+
+    }
+
+    #email {
+       width: 40vw;
+       height: 30px;
+       margin: .5rem;
+    }
+
+    input[type="submit"] {
+       height: 20px;
+       text-align: center;
+       font: normal normal bold 20px/30px Heebo;
+       letter-spacing: 0.33px;
+       width: 24vw;
+       height: 35px;
+       margin: 1.3rem;
+    }
+}
+
 
 
 
