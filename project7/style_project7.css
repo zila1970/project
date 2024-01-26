@@ -252,10 +252,10 @@ body {
         align-items: center;
     }
     .img>img{ 
-        width: 50%;
+        width: 80%;
         object-fit: cover;
-
-
+        height: 80%;
+       
     }
 
 }
