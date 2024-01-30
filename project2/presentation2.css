@@ -256,7 +256,17 @@ body {
     html {
         font-size: 55%;
     }
+
+    #img {
+        display: block;
+        margin: auto;
+        height: 70%px 0px 40px #00000066;
+        opacity: 1;
+        width: 70%;
+        object-fit: cover;
+    }
 }
+
 @media (max-width: 991px) {
     .header {
         padding: 2rem 3%;
@@ -269,16 +279,17 @@ body {
     .footer {
         padding: 2rem 3%;
     }
+
     #img {
-        height: 500px;
+        height: 60%;
         box-shadow: 0px 0px 40px #00000066;
         opacity: 1;
-        width: 50%;
-        object-fit: cover;   
+        width: 60%;
+        object-fit: contain;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     #menu-icon {
         display: block;
     }
@@ -339,19 +350,16 @@ body {
     #img {
         display: block;
         margin: auto;
-        height: 500px;
+        height: 50%;
         box-shadow: 0px 0px 40px #00000066;
         opacity: 1;
         width: 50%;
-        object-fit: cover;
+        object-fit: contain;
+        margin-top: 100px;
     }
 }
 
-@media (max-width: 600px) {
-    .project p {
-        font-size: 1rem;
-        margin: 1.5rem 0 2.5rem;
-    }
+@media (max-width: 550px) {
     .btn {
         padding: .5rem 1.5rem;
         margin: .5rem;
@@ -360,19 +368,19 @@ body {
         background: var(--main-color);
         border-radius: 4rem;
         box-shadow: 0 0 1rem var(--main-color);
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 500;
     }
 
     #img {
         display: block;
         margin: auto;
-        width: 30%;
-        height: 500px;
+        height: 30%;
         box-shadow: 0px 0px 40px #00000066;
         opacity: 1;
-        width: 50%;
-        object-fit: cover;
+        width: 30%;
+        object-fit: contain;
+        margin-top: 150px;
     }
 
     .footer p {
@@ -398,13 +406,21 @@ body {
         padding: .5rem;
         font-size: 1rem;
     }
+
+    #img {
+        display: block;
+        margin: auto;
+        height: 305;
+        box-shadow: 0px 0px 40px #00000066;
+        opacity: 1;
+        width: 30%;
+        object-fit: contain;
+        margin-top: 150px;
+
+    }
 }
 
-@media (max-width: 350px) {
-    .project p {
-        font-size: 1rem;
-        margin: 1.5rem 0 2.5rem;
-    }
+@media (max-width: 300px) {
     .btn {
         padding: .5rem 1.5rem;
         margin: .5rem;
@@ -413,7 +429,7 @@ body {
         background: var(--main-color);
         border-radius: 4rem;
         box-shadow: 0 0 1rem var(--main-color);
-        font-size: .8rem;
+        font-size: 1rem;
         font-weight: 500;
     }
 
